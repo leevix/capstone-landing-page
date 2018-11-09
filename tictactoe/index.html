@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    .Square {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 18pt;
+        font-weight: bold;
+        color: blue;
+
+    }
+</style>
+<script>
+    function startGame() {
+        document.turn = "x";
+        setMessage(document.turn + "gets to start.")
+    }
+
+    function setMessage(msg) {
+        documet.getElementById("message").innerText = msg;
+    }
+
+    function nextMove(square) {
+        square.innerText = document.turn;
+        switchTurn();
+    }
+    function switchTurn() {
+        if (document.turn == "x") {
+            document.turn = "o";
+        } else {
+            document.turn = "x";
+        }
+        setMessage("It's" +document.turn + "'s turn!");
+
+
+    }
+</script>
+</head>
+
+<body onload="startGame();">
+    <h1> welcome to my tic tac toe </h1>
+
+    <div id="message"></div>tickytackytoe</div>
+
+    <table border="20">
+
+        </tr>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        </tr>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        </tr>
+        </tr>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        <td class="Square" onclick="nextMove(this);"></td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
